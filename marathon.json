@@ -9,7 +9,7 @@
     "type": "DOCKER",
     "volumes": [],
     "docker": {
-      "image": "sdscello/2048",
+      "image": "lucidhwee/demo",
       "network": "BRIDGE",
       "portMappings": [
         {
@@ -29,7 +29,7 @@
   },
   "labels": {
     "HAPROXY_GROUP": "external",
-    "HAPROXY_0_VHOST":"2048.popori.cf"
+    "HAPROXY_0_VHOST":"demo1.popori.cf"
   },
   "portDefinitions": [
     {
