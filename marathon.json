@@ -1,0 +1,41 @@
+{
+  "id": "/2048",
+  "cmd": null,
+  "cpus": 0.3,
+  "mem": 128,
+  "disk": 0,
+  "instances": 1,
+  "container": {
+    "type": "DOCKER",
+    "volumes": [],
+    "docker": {
+      "image": "sdscello/2048",
+      "network": "BRIDGE",
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 0,
+          "servicePort": 10025,
+          "protocol": "tcp",
+          "name": "www",
+          "labels": {
+          }
+        }
+      ],
+      "privileged": false,
+      "parameters": [],
+      "forcePullImage": true
+    }
+  },
+  "labels": {
+    "HAPROXY_GROUP": "external",
+    "HAPROXY_0_VHOST":"2048.popori.cf"
+  },
+  "portDefinitions": [
+    {
+      "port": 10025,
+      "protocol": "tcp",
+      "labels": {}
+    }
+  ]
+}
